@@ -10,7 +10,7 @@ import Foundation
 @propertyWrapper
 open class KeychainWrapper<Value: Codable> {
     /// Enum type on coder and encoder.
-    public enum CodableType: String {
+    public enum CodableType {
         case plist
         case json
     }

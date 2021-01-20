@@ -8,7 +8,7 @@
 import Foundation
 import Security
 
-open class KeychainStorage {
+internal class KeychainStorage {
     
     /// `KeychainStorage` shared instance.
     fileprivate static let shared = KeychainStorage()

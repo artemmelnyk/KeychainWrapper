@@ -7,7 +7,7 @@
 
 import Security
 
-struct KeychainProvider {
+internal struct KeychainProvider {
     /// Keychain security class enum.
     enum SecClass {
         case generic
@@ -31,7 +31,7 @@ struct KeychainProvider {
      - Parameter account: `String` key to get stored value.
      - Parameter sync: `Bool` whether the data can be synchronized.
      */
-    static func query(secClass: SecClass, service: String, account: String, sync: Bool = true) -> [CFString: Any] {
+    internal static func query(secClass: SecClass, service: String, account: String, sync: Bool = true) -> [CFString: Any] {
         var dict: [CFString: Any] = [
             kSecClass: secClass.value,
             kSecAttrService: service,
