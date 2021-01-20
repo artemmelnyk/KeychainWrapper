@@ -1,0 +1,11 @@
+framework module KeychainWrapper {
+  umbrella header "KeychainWrapper.h"
+
+  export *
+  module * { export * }
+}
+
+module KeychainWrapper.Swift {
+    header "KeychainWrapper-Swift.h"
+    requires objc
+}
