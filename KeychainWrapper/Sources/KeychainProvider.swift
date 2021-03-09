@@ -33,6 +33,7 @@ internal struct KeychainProvider {
      */
     internal static func query(secClass: SecClass, service: String, account: String, sync: Bool = true) -> [CFString: Any] {
         var dict: [CFString: Any] = [
+            kSecAttrAccessible : kSecAttrAccessibleAfterFirstUnlock,
             kSecClass: secClass.value,
             kSecAttrService: service,
             kSecAttrAccount: account
